@@ -1,7 +1,9 @@
 FROM node
 
+COPY package.json package.json
+RUN npm i
+
 COPY . /app
 WORKDIR /app
 
-RUN npm install
 CMD npm start
